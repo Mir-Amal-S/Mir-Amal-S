@@ -1,0 +1,267 @@
+@import 'fonts.css';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav {
+  background: #3E284F;
+  box-shadow: 0px 0px 20px rgba(62, 40, 79, 0.5);
+  padding: 23px 0;
+}
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+  font-family: 'SR';
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav__right-btn {
+  position: relative;
+}
+.nav__right-amount {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 10px;
+  color: #3E284F;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: 300ms;
+}
+
+.nav__right-amount.active {
+  transform: scale(1);
+}
+
+
+
+.view__container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.burgers {
+  margin-top: 75px;
+}
+
+
+
+.burger__items{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+}
+.burger__item {
+  background: #F4F4F4;
+  box-shadow: 0px 20px 20px -15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  padding: 16px;
+}
+.burger__item-count {
+  width: 30px;
+  height: 30px;
+  background: #3E284F;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  font-family: 'OSR';
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  opacity: 0;
+  transition: 300ms;
+}
+.burger__item-count.active {
+  opacity: 1;
+}
+
+
+.burger__item-img {
+  margin-top: -54px;
+}
+.burger__item-title {
+  font-size: 18px;
+  line-height: 28px;
+  color: #404040;
+  font-family: 'SR';
+  margin: 20px 0;
+}
+.burger__item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.burger__item-info-price {
+  background: #3E284F;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  font-family: 'OSB';
+}
+.burger__item-info-add {
+  background: #3E284F;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 300ms;
+}
+.burger__item-info-add:hover {
+  background: green;
+}
+
+
+
+.nav__right {
+  position: relative;
+}
+
+.nav__right-list {
+  transform: translateY(-150%);
+  transition: 500ms;
+  position: absolute;
+  top: 63px;
+  right: -5px;
+  width: 360px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav__right-list.active {
+  transform: translateY(0);
+}
+
+.nav__right-list::before {
+  content: url(../images/arrow-basket.svg);
+  position: absolute;
+  right: 10px;
+  top: -13px;
+}
+
+
+
+.nav___right-top {
+  background: #775194;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 13px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  font-family: 'OSB';
+  border-radius: 10px 10px 0 0;
+}
+
+.nav__right-bottom {
+  background: #00A441;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  font-family: 'OSB';
+}
+.nav__right-burgers {
+  background: #FFFFFF;
+  height: 100%;
+  padding: 16px;
+}
+
+.nav__right-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.nav__right-item-left {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.nav__right-item-left  img {
+  width: 70px;
+  height: 54px;
+}
+.nav__right-item-name {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: 'SR';
+  color: #404040;
+}
+.nav__right-item-price {
+  font-family: 'OSR';
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+.nav__right-item-right{
+  display: flex;
+  align-items: center;
+  background: #BBBBBB;
+  border-radius: 4px;
+}
+.nav__right-item-minus,
+.nav__right-item-plus {
+  width: 25px;
+  height: 25px;
+}
+.nav__right-output {
+  background: #EEEEEE;
+  border: 0.5px solid #BBBBBB;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
